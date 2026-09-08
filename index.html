@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KyroData — L'intelligence de vos données d'entreprise, sous contrôle total</title>
+  <meta name="description" content="Interrogez vos bases SQL, documents et entrepôts de données en langage naturel. Analyse fluide, gouvernance stricte, étanchéité absolue de vos accès.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="app">
+
+  <!-- ============================ HERO ============================ -->
+  <div id="top" style="position:relative; background:linear-gradient(180deg, rgba(28,15,77,.05) 1px, transparent 1px) 0 0/100% 88px, linear-gradient(90deg, rgba(28,15,77,.05) 1px, transparent 1px) 0 0/88px 100%, linear-gradient(165deg, #efeafe 0%, #f7f6fb 55%, #f7f6fb 100%); overflow:hidden;">
+    <div style="position:absolute; top:-14%; right:-8%; width:46vw; height:46vw; border-radius:50%; filter:blur(20px); background:radial-gradient(circle, rgba(91,46,255,.18), transparent 68%); animation:floatBlob 16s ease-in-out infinite;"></div>
+
+    <nav style="position:sticky; top:0; z-index:60; display:flex; align-items:center; justify-content:space-between; gap:2rem; padding:1.15rem clamp(1.25rem, 1rem + 2vw, 3.5rem); backdrop-filter:blur(10px);">
+      <a href="#top" style="display:flex; align-items:center; gap:.6rem; font-weight:800; font-size:1.2rem; letter-spacing:-.02em;">
+        <svg viewBox="0 0 100 100" width="28" height="28" aria-hidden="true"><defs><linearGradient id="kgA" x1="10" y1="5" x2="90" y2="95" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a68bff"></stop><stop offset="0.55" stop-color="#5b2eff"></stop><stop offset="1" stop-color="#2b1466"></stop></linearGradient></defs><rect x="10" y="6" width="20" height="88" rx="10" fill="url(#kgA)"></rect><path d="M38 46 L74 8 Q77 5 82 5 L94 5 Q98 5 95.5 8.5 L60 47 Q57 50 60 53 L96.5 91.5 Q99 95 95 95 L82 95 Q78 95 75 92 L38 54 Z" fill="url(#kgA)"></path></svg>
+        KyroData
+        <span style="font-family:'JetBrains Mono',monospace; font-size:.6rem; letter-spacing:.18em; text-transform:uppercase; opacity:.45; margin-left:.4rem; font-weight:500;">Analyse · Gouvernance</span>
+      </a>
+      <div data-nav-links="true" style="display:flex; align-items:center; gap:clamp(1rem, 0.8rem + 0.9vw, 2rem); font-weight:600; font-size:.85rem;">
+        <a href="#produit" style="opacity:.7;">Produit</a>
+        <a href="#usages" style="opacity:.7;">Cas d'usage</a>
+        <a href="#tarifs" style="opacity:.7;">Tarifs</a>
+        <a href="#faq" style="opacity:.7;">Sécurité &amp; Gouvernance</a>
+        <a href="#demo-booking" style="opacity:.85; margin-right:.25rem;">Se connecter</a>
+        <a href="#demo-booking" data-nav-cta="true" data-magnetic="true" style="display:inline-flex; align-items:center; gap:.55rem; background:var(--purple); color:var(--white); padding:.7rem 1.25rem; border-radius:999px; font-weight:700; font-size:.84rem; box-shadow:0 10px 24px rgba(91,46,255,.28);">Réserver une démo <span style="font-size:.9rem;">→</span></a>
+      </div>
+    </nav>
+
+    <header style="position:relative; max-width:1180px; margin:0 auto; padding:clamp(2.5rem, 2rem + 3vw, 4.5rem) clamp(1.25rem, 1rem + 2vw, 3.5rem) clamp(3rem, 2rem + 4vw, 5rem); display:flex; flex-direction:column; align-items:center; text-align:center;">
+      <h1 data-reveal="true" style="margin:0 0 1.5rem; font-weight:800; line-height:1.04; letter-spacing:-.035em; font-size:clamp(2.3rem, 1.4rem + 3.6vw, 4rem); max-width:18ch;">
+        L'intelligence de vos données d'entreprise, <span style="color:var(--purple);">sous contrôle total.</span>
+      </h1>
+
+      <p data-reveal="true" style="max-width:62ch; margin:0 0 2.25rem; font-size:clamp(1rem, 0.95rem + 0.3vw, 1.1rem); line-height:1.6; color:rgba(28,15,77,.68);">
+        Interrogez vos bases SQL, documents et entrepôts de données en langage naturel. KyroData offre une expérience d'analyse fluide avec une gouvernance stricte et une étanchéité absolue de vos accès.
+      </p>
+
+      <div data-reveal="true" style="display:flex; align-items:center; justify-content:center; gap:1rem; flex-wrap:wrap; margin-bottom:2rem;">
+        <a href="#demo" data-magnetic="true" style="display:inline-flex; align-items:center; gap:.7rem; padding:1rem 1.8rem; border-radius:12px; font-weight:700; font-size:.95rem; background:var(--purple); color:var(--white); box-shadow:0 14px 34px rgba(91,46,255,.28);">Essayer la plateforme <span style="font-size:1rem;">→</span></a>
+        <a href="#demo-booking" data-magnetic="true" style="display:inline-flex; align-items:center; gap:.5rem; padding:1rem 1.8rem; border-radius:12px; font-weight:700; font-size:.95rem; background:var(--white); color:var(--ink); border:1px solid var(--line-w); box-shadow:0 8px 20px rgba(28,15,77,.06);">Réserver une démonstration</a>
+      </div>
+
+      <ul data-reveal="true" style="list-style:none; display:flex; align-items:center; justify-content:center; gap:clamp(1.25rem, 1rem + 1.5vw, 2.5rem); flex-wrap:wrap; margin:0; padding:0; font-size:.85rem; color:rgba(28,15,77,.72);">
+        <li style="display:inline-flex; align-items:center; gap:.5rem;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#35d488" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="m8 12 3 3 5-6"></path></svg>Déploiement Cloud ou On-Premise</li>
+        <li style="display:inline-flex; align-items:center; gap:.5rem;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#35d488" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="m8 12 3 3 5-6"></path></svg>Contrôle d'accès RBAC</li>
+        <li style="display:inline-flex; align-items:center; gap:.5rem;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#35d488" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="m8 12 3 3 5-6"></path></svg>Conforme RGPD / ISO</li>
+      </ul>
+
+      <p style="margin:1rem 0 0; font-size:.8rem; font-family:'JetBrains Mono',monospace; color:rgba(28,15,77,.6); opacity:0; max-height:0; overflow:hidden;">Vidéo produit en cours de montage — réservez une démo live en attendant.</p>
+
+      <div id="demo" data-reveal="true" data-parallax="true" style="position:relative; width:100%; max-width:1060px; margin-top:clamp(2.5rem, 2rem + 2vw, 4rem); text-align:left;">
+        <div data-demo-panel="true" style="background:var(--white); border:1px solid var(--line-w); border-radius:20px; overflow:hidden; box-shadow:0 40px 90px rgba(28,15,77,.14); color:var(--ink);">
+          <div style="display:flex; align-items:center; gap:.5rem; padding:.85rem 1.1rem; background:var(--offwhite); border-bottom:1px solid var(--line-w);">
+            <span style="width:10px; height:10px; border-radius:50%; background:#ff5f57;"></span>
+            <span style="width:10px; height:10px; border-radius:50%; background:#febc2e;"></span>
+            <span style="width:10px; height:10px; border-radius:50%; background:#28c840;"></span>
+            <span style="margin:0 auto; display:inline-flex; align-items:center; gap:.45rem; font-family:'JetBrains Mono',monospace; font-size:.66rem; letter-spacing:.03em; color:rgba(28,15,77,.55); background:var(--white); border:1px solid var(--line-w); padding:.3rem .9rem; border-radius:999px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#35d488" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="m8 12 3 3 5-6"></path></svg>app.kyrodata.internal/workspace/finance</span>
+          </div>
+          <div style="padding:1.75rem; display:flex; flex-direction:column; gap:1.5rem;">
+            <div style="display:flex; gap:.85rem; align-items:flex-start; justify-content:flex-end;">
+              <p data-demo-typed="true" style="margin:0; padding:.85rem 1.1rem; background:var(--lav-soft); border-radius:14px 14px 4px 14px; font-size:.9rem; line-height:1.5; max-width:60%;"></p>
+              <span style="flex-shrink:0; width:2rem; height:2rem; border-radius:50%; background:var(--purple); color:var(--white); display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:.66rem; font-weight:700;">AD</span>
+            </div>
+            <div style="display:flex; gap:.85rem; align-items:flex-start;">
+              <span style="flex-shrink:0; width:2rem; height:2rem; border-radius:50%; background:var(--lav-soft); padding:.4rem; display:flex; align-items:center; justify-content:center;">
+                <svg viewBox="0 0 100 100" width="100%" height="100%"><defs><linearGradient id="kgB" x1="10" y1="5" x2="90" y2="95" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a68bff"></stop><stop offset="0.55" stop-color="#5b2eff"></stop><stop offset="1" stop-color="#2b1466"></stop></linearGradient></defs><rect x="10" y="6" width="20" height="88" rx="10" fill="url(#kgB)"></rect><path d="M38 46 L74 8 Q77 5 82 5 L94 5 Q98 5 95.5 8.5 L60 47 Q57 50 60 53 L96.5 91.5 Q99 95 95 95 L82 95 Q78 95 75 92 L38 54 Z" fill="url(#kgB)"></path></svg>
+              </span>
+              <div style="flex:1; min-width:0; padding-top:.3rem;">
+                <div data-demo-thinking="true" style="display:none; gap:5px; padding:.4rem 0;">
+                  <span style="width:6px; height:6px; border-radius:50%; background:var(--lavender); animation:pulseDot 1.2s ease-in-out infinite;"></span>
+                  <span style="width:6px; height:6px; border-radius:50%; background:var(--lavender); animation:pulseDot 1.2s ease-in-out infinite .15s;"></span>
+                  <span style="width:6px; height:6px; border-radius:50%; background:var(--lavender); animation:pulseDot 1.2s ease-in-out infinite .3s;"></span>
+                </div>
+                <div data-demo-answer="true" style="opacity:0; transform:translateY(8px); transition:opacity .5s var(--ease), transform .5s var(--ease); background:var(--offwhite); border:1px solid var(--line-w); border-radius:14px; padding:1.1rem 1.25rem;">
+                  <p style="font-size:.78rem; color:rgba(28,15,77,.7); margin:0 0 .9rem;">Analyse basée sur la source <strong style="font-family:'JetBrains Mono',monospace; color:var(--purple); font-weight:500;">PostgreSQL_Finance_Main</strong> :</p>
+                  <table style="width:100%; border-collapse:collapse; font-size:.82rem; margin-bottom:.8rem;">
+                    <thead><tr>
+                      <th style="text-align:left; padding:.55rem .7rem; border-bottom:1px solid var(--line-w); font-family:'JetBrains Mono',monospace; font-size:.62rem; letter-spacing:.08em; text-transform:uppercase; color:rgba(28,15,77,.5); font-weight:500;">Département</th>
+                      <th style="text-align:left; padding:.55rem .7rem; border-bottom:1px solid var(--line-w); font-family:'JetBrains Mono',monospace; font-size:.62rem; letter-spacing:.08em; text-transform:uppercase; color:rgba(28,15,77,.5); font-weight:500;">CA Q2</th>
+                      <th style="text-align:left; padding:.55rem .7rem; border-bottom:1px solid var(--line-w); font-family:'JetBrains Mono',monospace; font-size:.62rem; letter-spacing:.08em; text-transform:uppercase; color:rgba(28,15,77,.5); font-weight:500;">vs Q1</th>
+                    </tr></thead>
+                    <tbody>
+                      <tr><td style="padding:.55rem .7rem; border-bottom:1px solid var(--line-w);">Supply Chain</td><td style="padding:.55rem .7rem; border-bottom:1px solid var(--line-w);">420 000 €</td><td style="padding:.55rem .7rem; border-bottom:1px solid var(--line-w); color:var(--green); font-family:'JetBrains Mono',monospace;">+14.2%</td></tr>
+                      <tr><td style="padding:.55rem .7rem; border-bottom:1px solid var(--line-w);">Services Financiers</td><td style="padding:.55rem .7rem; border-bottom:1px solid var(--line-w);">890 000 €</td><td style="padding:.55rem .7rem; border-bottom:1px solid var(--line-w); color:var(--green); font-family:'JetBrains Mono',monospace;">+8.7%</td></tr>
+                    </tbody>
+                  </table>
+                  <p style="font-size:.68rem; color:rgba(28,15,77,.45); margin:.9rem 0 0;">Généré en 0.24 s · Données chiffrées de bout en bout · Requête tracée</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- ====================== AVANT / APRÈS ====================== -->
+  <section id="comparatif" style="padding:clamp(1.5rem, 1rem + 2vw, 2.5rem) clamp(1.25rem, 1rem + 2vw, 3.5rem) 0;">
+    <div data-reveal="true" data-grid="split" style="max-width:1320px; margin:0 auto; background:var(--white); border-radius:28px; box-shadow:0 24px 60px rgba(28,15,77,.08); padding:clamp(1.75rem, 1.4rem + 1.5vw, 2.75rem); display:grid; grid-template-columns:1.05fr 1fr; gap:clamp(2rem, 1.5rem + 2vw, 3.5rem); transition:opacity .7s var(--ease), transform .7s var(--ease);">
+      <div>
+        <h2 style="margin:0 0 .35rem; font-size:1.4rem; font-weight:800; letter-spacing:-.02em;">Avant → Après</h2>
+        <p style="margin:0 0 1.5rem; font-size:.88rem; color:rgba(28,15,77,.6);">Ce qui change concrètement dans vos équipes.</p>
+
+        <div style="display:flex; gap:.4rem; background:var(--lav-soft); border-radius:999px; padding:.3rem; margin-bottom:1.25rem;">
+          <button data-tab="before" style="flex:1; padding:.6rem 1rem; border-radius:999px; font-weight:700; font-size:.82rem; font-family:inherit; cursor:pointer; border:none; transition:background .3s var(--ease), color .3s var(--ease);">Sans KyroData</button>
+          <button data-tab="after" style="flex:1; padding:.6rem 1rem; border-radius:999px; font-weight:700; font-size:.82rem; font-family:inherit; cursor:pointer; border:none; transition:background .3s var(--ease), color .3s var(--ease);">Avec KyroData</button>
+        </div>
+
+        <div style="position:relative; min-height:230px;">
+          <div data-panel="before" style="transition:opacity 0.4s var(--ease);">
+            <div style="display:flex; flex-direction:column; gap:.75rem;">
+              <div style="display:flex; gap:.9rem; align-items:flex-start; background:var(--offwhite); border-radius:14px; padding:1rem 1.1rem;"><span style="font-size:1.2rem;">🕓</span><div><p style="margin:0 0 .2rem; font-weight:700; font-size:.9rem;">3 jours pour un rapport</p><p style="margin:0; font-size:.8rem; line-height:1.5; color:rgba(28,15,77,.62);">Extraction manuelle, allers-retours, Excel bricolé.</p></div></div>
+              <div style="display:flex; gap:.9rem; align-items:flex-start; background:var(--offwhite); border-radius:14px; padding:1rem 1.1rem;"><span style="font-size:1.2rem;">📥</span><div><p style="margin:0 0 .2rem; font-weight:700; font-size:.9rem;">Data team submergée</p><p style="margin:0; font-size:.8rem; line-height:1.5; color:rgba(28,15,77,.62);">Chaque demande ad hoc devient un ticket en file d'attente.</p></div></div>
+              <div style="display:flex; gap:.9rem; align-items:flex-start; background:var(--offwhite); border-radius:14px; padding:1rem 1.1rem;"><span style="font-size:1.2rem;">🔓</span><div><p style="margin:0 0 .2rem; font-weight:700; font-size:.9rem;">Accès flous</p><p style="margin:0; font-size:.8rem; line-height:1.5; color:rgba(28,15,77,.62);">Trop larges ou trop bloqués, sans traçabilité claire.</p></div></div>
+            </div>
+          </div>
+          <div data-panel="after" style="transition:opacity 0.4s var(--ease);">
+            <div style="display:flex; flex-direction:column; gap:.75rem;">
+              <div style="display:flex; gap:.9rem; align-items:flex-start; background:var(--lav-soft); border-radius:14px; padding:1rem 1.1rem;"><span style="font-size:1.2rem;">⚡</span><div><p style="margin:0 0 .2rem; font-weight:700; font-size:.9rem;">Réponse en secondes</p><p style="margin:0; font-size:.8rem; line-height:1.5; color:rgba(28,15,77,.68);">Une question en français, une réponse sourcée immédiate.</p></div></div>
+              <div style="display:flex; gap:.9rem; align-items:flex-start; background:var(--lav-soft); border-radius:14px; padding:1rem 1.1rem;"><span style="font-size:1.2rem;">🧭</span><div><p style="margin:0 0 .2rem; font-weight:700; font-size:.9rem;">Zéro ticket</p><p style="margin:0; font-size:.8rem; line-height:1.5; color:rgba(28,15,77,.68);">Chaque équipe s'auto-sert dans son propre périmètre.</p></div></div>
+              <div style="display:flex; gap:.9rem; align-items:flex-start; background:var(--lav-soft); border-radius:14px; padding:1rem 1.1rem;"><span style="font-size:1.2rem;">🔒</span><div><p style="margin:0 0 .2rem; font-weight:700; font-size:.9rem;">Tout est tracé</p><p style="margin:0; font-size:.8rem; line-height:1.5; color:rgba(28,15,77,.68);">RBAC strict et logs d'audit complets, prêts pour la conformité.</p></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div data-grid="metrics" style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.75rem; margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid var(--line-w);">
+          <div><p style="margin:0 0 .2rem; font-size:1.25rem; font-weight:800; color:var(--purple); font-variant-numeric:tabular-nums;">-<span data-counter="true" data-target="85" data-suffix="%">0</span></p><p style="margin:0; font-size:.7rem; line-height:1.35; color:rgba(28,15,77,.6);">Temps de reporting</p></div>
+          <div><p style="margin:0 0 .2rem; font-size:1.25rem; font-weight:800; color:var(--purple); font-variant-numeric:tabular-nums;">-<span data-counter="true" data-target="92" data-suffix="%">0</span></p><p style="margin:0; font-size:.7rem; line-height:1.35; color:rgba(28,15,77,.6);">Tickets à la data team</p></div>
+          <div><p style="margin:0 0 .2rem; font-size:1.25rem; font-weight:800; color:var(--purple); font-variant-numeric:tabular-nums;">×<span data-counter="true" data-target="12" data-suffix="">0</span></p><p style="margin:0; font-size:.7rem; line-height:1.35; color:rgba(28,15,77,.6);">Équipes autonomes</p></div>
+          <div><p style="margin:0 0 .2rem; font-size:1.25rem; font-weight:800; color:var(--purple); font-variant-numeric:tabular-nums;">&lt;<span data-counter="true" data-target="300" data-suffix="ms">0</span></p><p style="margin:0; font-size:.7rem; line-height:1.35; color:rgba(28,15,77,.6);">Temps de réponse</p></div>
+        </div>
+      </div>
+
+      <div>
+        <h2 style="margin:0 0 .35rem; font-size:1.4rem; font-weight:800; letter-spacing:-.02em;">Comment ça marche ?&nbsp;</h2>
+        <p style="margin:0 0 2rem; font-size:.88rem; color:rgba(28,15,77,.6);"><br></p>
+
+        <div data-grid="process" style="position:relative; display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:.6rem;">
+          <div data-process-line="true" style="position:absolute; top:26px; left:10%; right:10%; height:1px; background:repeating-linear-gradient(90deg, rgba(91,46,255,.35) 0 6px, transparent 6px 12px);"></div>
+          <div style="position:relative; text-align:center;">
+            <div style="width:52px; height:52px; margin:0 auto .8rem; border-radius:50%; background:var(--lav-soft); color:var(--purple); display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-weight:700; font-size:.85rem; border:3px solid var(--white); box-shadow:0 6px 16px rgba(28,15,77,.08);">01</div>
+            <p style="margin:0 0 .3rem; font-weight:700; font-size:.82rem;">Connecter</p>
+            <p style="margin:0; font-size:.7rem; line-height:1.45; color:rgba(28,15,77,.6);">Vos bases et fichiers, en quelques clics.</p>
+          </div>
+          <div style="position:relative; text-align:center;">
+            <div style="width:52px; height:52px; margin:0 auto .8rem; border-radius:50%; background:var(--lav-soft); color:var(--purple); display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-weight:700; font-size:.85rem; border:3px solid var(--white); box-shadow:0 6px 16px rgba(28,15,77,.08);">02</div>
+            <p style="margin:0 0 .3rem; font-weight:700; font-size:.82rem;">Cadrer</p>
+            <p style="margin:0; font-size:.7rem; line-height:1.45; color:rgba(28,15,77,.6);">Rôles, périmètres et règles RBAC.</p>
+          </div>
+          <div style="position:relative; text-align:center;">
+            <div style="width:52px; height:52px; margin:0 auto .8rem; border-radius:50%; background:var(--lav-soft); color:var(--purple); display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-weight:700; font-size:.85rem; border:3px solid var(--white); box-shadow:0 6px 16px rgba(28,15,77,.08);">03</div>
+            <p style="margin:0 0 .3rem; font-weight:700; font-size:.82rem;">Entraîner</p>
+            <p style="margin:0; font-size:.7rem; line-height:1.45; color:rgba(28,15,77,.6);">KyroData apprend votre métier.</p>
+          </div>
+          <div style="position:relative; text-align:center;">
+            <div style="width:52px; height:52px; margin:0 auto .8rem; border-radius:50%; background:var(--lav-soft); color:var(--purple); display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-weight:700; font-size:.85rem; border:3px solid var(--white); box-shadow:0 6px 16px rgba(28,15,77,.08);">04</div>
+            <p style="margin:0 0 .3rem; font-weight:700; font-size:.82rem;">Ouvrir</p>
+            <p style="margin:0; font-size:.7rem; line-height:1.45; color:rgba(28,15,77,.6);">Les équipes posent leurs questions.</p>
+          </div>
+          <div style="position:relative; text-align:center;">
+            <div style="width:52px; height:52px; margin:0 auto .8rem; border-radius:50%; background:var(--lav-soft); color:var(--purple); display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-weight:700; font-size:.85rem; border:3px solid var(--white); box-shadow:0 6px 16px rgba(28,15,77,.08);">05</div>
+            <p style="margin:0 0 .3rem; font-weight:700; font-size:.82rem;">Piloter</p>
+            <p style="margin:0; font-size:.7rem; line-height:1.45; color:rgba(28,15,77,.6);">Logs d'audit et suivi d'usage.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem; background:linear-gradient(135deg, var(--purple), var(--purple-dim)); background-size:200% 200%; animation:gradientPan 16s ease-in-out infinite; border-radius:20px; padding:1.5rem 1.75rem; display:flex; align-items:center; justify-content:space-between; gap:1.5rem; color:var(--white); flex-wrap:wrap;">
+          <div>
+            <p style="margin:0 0 .3rem; font-weight:800; font-size:1.15rem;">Audit de votre source de données offert</p>
+            <p style="margin:0; font-size:.82rem; opacity:.85;">30 minutes avec un expert, discutez de vos vraies données.</p>
+          </div>
+          <a href="#demo-booking" data-magnetic="true" style="display:inline-flex; align-items:center; gap:.6rem; background:var(--white); color:var(--purple); padding:.8rem 1.4rem; border-radius:999px; font-weight:700; font-size:.85rem; white-space:nowrap;">Réserver maintenant →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= CAS D'USAGE ========================= -->
+  <section id="usages" style="padding:clamp(2.5rem, 2rem + 2vw, 4rem) clamp(1.25rem, 1rem + 2vw, 3.5rem);">
+    <div style="max-width:1320px; margin:0 auto;">
+      <div data-reveal="true" style="display:flex; align-items:flex-end; justify-content:space-between; gap:2rem; margin-bottom:1.75rem; flex-wrap:wrap; transition:opacity .6s var(--ease), transform .6s var(--ease);">
+        <div>
+          <h2 style="margin:0 0 .35rem; font-size:clamp(1.5rem, 1.2rem + 1.2vw, 2rem); font-weight:800; letter-spacing:-.025em;">Ce que vos équipes demandent</h2>
+          <p style="margin:0; font-size:.9rem; color:rgba(28,15,77,.6);">Des questions réelles, posées chaque jour dans KyroData.</p>
+        </div>
+        <a href="#demo-booking" style="font-weight:700; font-size:.85rem; color:var(--purple);">Voir sur vos données →</a>
+      </div>
+
+      <div data-grid="cards4" style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1.25rem;">
+        <article data-tilt="true" data-reveal="true" style="background:var(--white); border-radius:22px; overflow:hidden; box-shadow:0 16px 44px rgba(28,15,77,.07); transition:opacity .6s var(--ease), transform .6s var(--ease), box-shadow .3s var(--ease);">
+          <div style="background:repeating-linear-gradient(135deg, rgba(91,46,255,.07) 0 2px, transparent 2px 12px), var(--lav-soft); aspect-ratio:4/3; display:flex; align-items:center; justify-content:center;">
+            <p style="margin:0; font-family:'JetBrains Mono',monospace; font-size:.68rem; line-height:1.5; color:var(--purple-dark); opacity:.75; padding:1.25rem; text-align:center;">« Quels postes ont dépassé le budget de plus de 10 % ce mois-ci ? »</p>
+          </div>
+          <div style="padding:1.15rem 1.25rem 1.35rem;">
+            <span style="display:inline-block; font-family:'JetBrains Mono',monospace; font-size:.6rem; letter-spacing:.12em; text-transform:uppercase; background:var(--lav-soft); color:var(--purple); padding:.3rem .6rem; border-radius:999px; margin-bottom:.7rem;">Finance</span>
+            <p style="margin:0 0 .3rem; font-weight:700; font-size:.95rem;">Clôture mensuelle</p>
+            <p style="margin:0; font-size:.8rem; line-height:1.5; color:rgba(28,15,77,.62);">Écarts budgétaires expliqués sans exports manuels.</p>
+          </div>
+        </article>
+        <article data-tilt="true" data-reveal="true" style="background:var(--white); border-radius:22px; overflow:hidden; box-shadow:0 16px 44px rgba(28,15,77,.07); transition:opacity .6s var(--ease), transform .6s var(--ease), box-shadow .3s var(--ease);">
+          <div style="background:repeating-linear-gradient(135deg, rgba(91,46,255,.07) 0 2px, transparent 2px 12px), var(--lav-soft); aspect-ratio:4/3; display:flex; align-items:center; justify-content:center;">
+            <p style="margin:0; font-family:'JetBrains Mono',monospace; font-size:.68rem; line-height:1.5; color:var(--purple-dark); opacity:.75; padding:1.25rem; text-align:center;">« Quels SKU risquent la rupture sous 14 jours sur l'entrepôt Nord ? »</p>
+          </div>
+          <div style="padding:1.15rem 1.25rem 1.35rem;">
+            <span style="display:inline-block; font-family:'JetBrains Mono',monospace; font-size:.6rem; letter-spacing:.12em; text-transform:uppercase; background:var(--lav-soft); color:var(--purple); padding:.3rem .6rem; border-radius:999px; margin-bottom:.7rem;">Supply Chain</span>
+            <p style="margin:0 0 .3rem; font-weight:700; font-size:.95rem;">Ruptures &amp; stocks</p>
+            <p style="margin:0; font-size:.8rem; line-height:1.5; color:rgba(28,15,77,.62);">Anticipez les ruptures avant qu'elles ne coûtent.</p>
+          </div>
+        </article>
+        <article data-tilt="true" data-reveal="true" style="background:var(--white); border-radius:22px; overflow:hidden; box-shadow:0 16px 44px rgba(28,15,77,.07); transition:opacity .6s var(--ease), transform .6s var(--ease), box-shadow .3s var(--ease);">
+          <div style="background:repeating-linear-gradient(135deg, rgba(91,46,255,.07) 0 2px, transparent 2px 12px), var(--lav-soft); aspect-ratio:4/3; display:flex; align-items:center; justify-content:center;">
+            <p style="margin:0; font-family:'JetBrains Mono',monospace; font-size:.68rem; line-height:1.5; color:var(--purple-dark); opacity:.75; padding:1.25rem; text-align:center;">« Quel est le taux de conversion par région sur les 3 derniers trimestres ? »</p>
+          </div>
+          <div style="padding:1.15rem 1.25rem 1.35rem;">
+            <span style="display:inline-block; font-family:'JetBrains Mono',monospace; font-size:.6rem; letter-spacing:.12em; text-transform:uppercase; background:var(--lav-soft); color:var(--purple); padding:.3rem .6rem; border-radius:999px; margin-bottom:.7rem;">Ventes</span>
+            <p style="margin:0 0 .3rem; font-weight:700; font-size:.95rem;">Performance commerciale</p>
+            <p style="margin:0; font-size:.8rem; line-height:1.5; color:rgba(28,15,77,.62);">Le pipeline lu par région, produit et cycle.</p>
+          </div>
+        </article>
+        <article data-tilt="true" data-reveal="true" style="background:var(--white); border-radius:22px; overflow:hidden; box-shadow:0 16px 44px rgba(28,15,77,.07); transition:opacity .6s var(--ease), transform .6s var(--ease), box-shadow .3s var(--ease);">
+          <div style="background:repeating-linear-gradient(135deg, rgba(91,46,255,.07) 0 2px, transparent 2px 12px), var(--lav-soft); aspect-ratio:4/3; display:flex; align-items:center; justify-content:center;">
+            <p style="margin:0; font-family:'JetBrains Mono',monospace; font-size:.68rem; line-height:1.5; color:var(--purple-dark); opacity:.75; padding:1.25rem; text-align:center;">« Montre l'évolution de la marge brute par filiale depuis janvier. »</p>
+          </div>
+          <div style="padding:1.15rem 1.25rem 1.35rem;">
+            <span style="display:inline-block; font-family:'JetBrains Mono',monospace; font-size:.6rem; letter-spacing:.12em; text-transform:uppercase; background:var(--lav-soft); color:var(--purple); padding:.3rem .6rem; border-radius:999px; margin-bottom:.7rem;">Direction</span>
+            <p style="margin:0 0 .3rem; font-weight:700; font-size:.95rem;">Comité de direction</p>
+            <p style="margin:0; font-size:.8rem; line-height:1.5; color:rgba(28,15,77,.62);">Les chiffres du COMEX, disponibles la veille au soir.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= TÉMOIGNAGES ========================= -->
+  <section style="padding:0 clamp(1.25rem, 1rem + 2vw, 3.5rem) clamp(2.5rem, 2rem + 2vw, 4rem);">
+    <div data-reveal="true" data-grid="split" style="max-width:1320px; margin:0 auto; background:var(--white); border-radius:28px; box-shadow:0 24px 60px rgba(28,15,77,.08); padding:clamp(1.75rem, 1.4rem + 1.5vw, 2.5rem); display:grid; grid-template-columns:0.85fr 1.15fr; gap:clamp(1.5rem, 1.2rem + 2vw, 3rem); align-items:center; transition:opacity .6s var(--ease), transform .6s var(--ease);">
+      <div>
+        <p style="margin:0 0 .5rem; font-weight:800; font-size:1.05rem;">Ils visualisent leurs données avec KyroData</p>
+        <p style="margin:0 0 1.25rem; font-size:.82rem; line-height:1.55; color:rgba(28,15,77,.6);">Des directions financières, supply chain et IT qui ont supprimé l'attente entre la question et la réponse.</p>
+        <div style="overflow:hidden; mask-image:linear-gradient(90deg, black 80%, transparent); -webkit-mask-image:linear-gradient(90deg, black 80%, transparent);">
+          <div style="display:flex; width:max-content; gap:2rem; animation:marquee 28s linear infinite; align-items:center;">
+            <span style="font-weight:700; font-size:.95rem; opacity:.4; flex-shrink:0;">Atlas Logistique</span>
+            <span style="font-weight:700; font-size:.95rem; opacity:.4; flex-shrink:0;">NovaSanté</span>
+            <span style="font-weight:700; font-size:.95rem; opacity:.4; flex-shrink:0;">Ferrand Industries</span>
+            <span style="font-weight:700; font-size:.95rem; opacity:.4; flex-shrink:0;">Solen Capital</span>
+            <span style="font-weight:700; font-size:.95rem; opacity:.4; flex-shrink:0;">Meriva Group</span>
+            <span style="font-weight:700; font-size:.95rem; opacity:.4; flex-shrink:0;">Atlas Logistique</span>
+            <span style="font-weight:700; font-size:.95rem; opacity:.4; flex-shrink:0;">NovaSanté</span>
+            <span style="font-weight:700; font-size:.95rem; opacity:.4; flex-shrink:0;">Ferrand Industries</span>
+            <span style="font-weight:700; font-size:.95rem; opacity:.4; flex-shrink:0;">Solen Capital</span>
+            <span style="font-weight:700; font-size:.95rem; opacity:.4; flex-shrink:0;">Meriva Group</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:var(--offwhite); border-radius:22px; padding:clamp(1.5rem, 1.2rem + 1vw, 2rem); position:relative; min-height:190px;">
+        <div data-testimonial="true">
+          <span style="display:block; font-size:2rem; line-height:1; color:var(--purple); margin-bottom:.5rem;">“</span>
+          <p style="margin:0 0 1rem; font-size:1rem; line-height:1.6;">On a arrêté de produire des rapports. On répond à des questions.</p>
+          <p style="margin:0; font-weight:700; font-size:.85rem;">Marc Delvaux</p>
+          <p style="margin:0; font-size:.75rem; color:rgba(28,15,77,.55);">DSI · Atlas Logistique</p>
+        </div>
+        <div data-testimonial="true">
+          <span style="display:block; font-size:2rem; line-height:1; color:var(--purple); margin-bottom:.5rem;">“</span>
+          <p style="margin:0 0 1rem; font-size:1rem; line-height:1.6;">Nos équipes finance posent leurs questions directement, sans attendre un créneau avec la data team. Le temps de réponse est devenu notre avantage.</p>
+          <p style="margin:0; font-weight:700; font-size:.85rem;">Camille Roussel</p>
+          <p style="margin:0; font-size:.75rem; color:rgba(28,15,77,.55);">VP Data · NovaSanté</p>
+        </div>
+        <div data-testimonial="true">
+          <span style="display:block; font-size:2rem; line-height:1; color:var(--purple); margin-bottom:.5rem;">“</span>
+          <p style="margin:0 0 1rem; font-size:1rem; line-height:1.6;">La gouvernance était notre blocage numéro un. KyroData nous a permis d'ouvrir l'accès sans jamais perdre le contrôle.</p>
+          <p style="margin:0; font-weight:700; font-size:.85rem;">Julien Ferrand</p>
+          <p style="margin:0; font-size:.75rem; color:rgba(28,15,77,.55);">Directeur Financier · Ferrand Industries</p>
+        </div>
+        <div style="position:absolute; bottom:1.25rem; right:1.5rem; display:flex; gap:.45rem;">
+          <button data-dot="true" style="border:none; padding:0; cursor:pointer;"></button>
+          <button data-dot="true" style="border:none; padding:0; cursor:pointer;"></button>
+          <button data-dot="true" style="border:none; padding:0; cursor:pointer;"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= PRODUIT ========================= -->
+  <section id="produit" style="background:var(--purple-dark); color:#f5f4f7; padding:clamp(3.5rem, 2.5rem + 4vw, 6rem) clamp(1.25rem, 1rem + 2vw, 3.5rem); border-radius:36px 36px 0 0;">
+    <div style="max-width:1320px; margin:0 auto;">
+      <div style="max-width:640px; margin:0 auto clamp(2.5rem, 2rem + 2vw, 3.5rem); text-align:center;">
+        <p data-reveal="true" style="font-family:'JetBrains Mono',monospace; font-size:.7rem; letter-spacing:.16em; text-transform:uppercase; color:var(--lavender); margin:0 0 .75rem; transition:opacity .6s var(--ease), transform .6s var(--ease);">Architecture entreprise</p>
+        <h2 data-reveal="true" style="margin:0 0 .75rem; font-size:clamp(1.7rem, 1.3rem + 2vw, 2.5rem); font-weight:800; letter-spacing:-.025em; line-height:1.12; transition:opacity .6s var(--ease) .05s, transform .6s var(--ease) .05s;">Analysez vos données depuis votre poste de travail.</h2>
+        <p data-reveal="true" style="margin:0; font-size:.95rem; line-height:1.6; transition:opacity .6s var(--ease) .1s, transform .6s var(--ease) .1s;">Conçu pour les équipes exigeantes, adopté par les équipes métier.</p>
+      </div>
+
+      <div data-grid="cards3" style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem;">
+        <article data-tilt="true" data-reveal="true" style="background:rgba(245,244,247,.05); border:1px solid var(--line-p); border-radius:20px; padding:1.75rem; display:flex; flex-direction:column; gap:.7rem; transition:opacity .6s var(--ease), transform .6s var(--ease);">
+          <p style="margin:0; font-family:'JetBrains Mono',monospace; font-size:.72rem; color:var(--lavender); letter-spacing:.1em;">01</p>
+          <h3 style="margin:0; font-size:1.08rem; font-weight:700;">Réponses instantanées, pas de tickets</h3>
+          <p style="margin:0; font-size:.85rem; line-height:1.6; opacity:.72;">Une question en langage naturel, une réponse sourcée en quelques secondes sans passer par la data team.</p>
+        </article>
+        <article data-tilt="true" data-reveal="true" style="background:rgba(245,244,247,.05); border:1px solid var(--line-p); border-radius:20px; padding:1.75rem; display:flex; flex-direction:column; gap:.7rem; transition:opacity .6s var(--ease), transform .6s var(--ease);">
+          <p style="margin:0; font-family:'JetBrains Mono',monospace; font-size:.72rem; color:var(--lavender); letter-spacing:.1em;">02</p>
+          <h3 style="margin:0; font-size:1.08rem; font-weight:700;">Vos données ne bougent jamais</h3>
+          <p style="margin:0; font-size:.85rem; line-height:1.6; opacity:.72;">Exécution dans une session, gouvernance RBAC stricte, aucune duplication vers un tiers.</p>
+        </article>
+        <article data-tilt="true" data-reveal="true" style="background:rgba(245,244,247,.05); border:1px solid var(--line-p); border-radius:20px; padding:1.75rem; display:flex; flex-direction:column; gap:.7rem; transition:opacity .6s var(--ease), transform .6s var(--ease);">
+          <p style="margin:0; font-family:'JetBrains Mono',monospace; font-size:.72rem; color:var(--lavender); letter-spacing:.1em;">03</p>
+          <h3 style="margin:0; font-size:1.08rem; font-weight:700;">Toutes vos sources de données</h3>
+          <p style="margin:0; font-size:.85rem; line-height:1.6; opacity:.72;">40+ connecteurs natifs : bases SQL, entrepôts cloud, fichiers structurés et API.</p>
+        </article>
+        <article data-tilt="true" data-reveal="true" style="background:rgba(245,244,247,.05); border:1px solid var(--line-p); border-radius:20px; padding:1.75rem; display:flex; flex-direction:column; gap:.7rem; transition:opacity .6s var(--ease), transform .6s var(--ease);">
+          <p style="margin:0; font-family:'JetBrains Mono',monospace; font-size:.72rem; color:var(--lavender); letter-spacing:.1em;">04</p>
+          <h3 style="margin:0; font-size:1.08rem; font-weight:700;">Performance à l'échelle</h3>
+          <p style="margin:0; font-size:.85rem; line-height:1.6; opacity:.72;">Requêtes complexes traitées en moins de 300 ms, même sur de gros volumes.</p>
+        </article>
+        <article data-tilt="true" data-reveal="true" style="background:rgba(245,244,247,.05); border:1px solid var(--line-p); border-radius:20px; padding:1.75rem; display:flex; flex-direction:column; gap:.7rem; transition:opacity .6s var(--ease), transform .6s var(--ease);">
+          <p style="margin:0; font-family:'JetBrains Mono',monospace; font-size:.72rem; color:var(--lavender); letter-spacing:.1em;">05</p>
+          <h3 style="margin:0; font-size:1.08rem; font-weight:700;">Un espace par équipe</h3>
+          <p style="margin:0; font-size:.85rem; line-height:1.6; opacity:.72;">Workspaces isolés par département, avec des règles d'accès adaptées à chacun.</p>
+        </article>
+        <article data-tilt="true" data-reveal="true" style="background:rgba(245,244,247,.05); border:1px solid var(--line-p); border-radius:20px; padding:1.75rem; display:flex; flex-direction:column; gap:.7rem; transition:opacity .6s var(--ease), transform .6s var(--ease);">
+          <p style="margin:0; font-family:'JetBrains Mono',monospace; font-size:.72rem; color:var(--lavender); letter-spacing:.1em;">06</p>
+          <h3 style="margin:0; font-size:1.08rem; font-weight:700;">Traçabilité totale</h3>
+          <p style="margin:0; font-size:.85rem; line-height:1.6; opacity:.72;">Historique horodaté de chaque requête et action admin, prêt pour vos audits.</p>
+        </article>
+      </div>
+
+      <div data-reveal="true" style="margin-top:clamp(2.5rem, 2rem + 2vw, 3.5rem); overflow:hidden; transition:opacity .6s var(--ease), transform .6s var(--ease); mask-image:linear-gradient(90deg, transparent, black 8%, black 92%, transparent); -webkit-mask-image:linear-gradient(90deg, transparent, black 8%, black 92%, transparent);">
+        <div style="display:flex; width:max-content; gap:.75rem; animation:marquee 26s linear infinite;">
+          <span style="flex-shrink:0; font-family:'JetBrains Mono',monospace; font-size:.78rem; padding:.65rem 1.25rem; border:1px solid var(--line-p); border-radius:999px; opacity:.75;">PostgreSQL</span>
+          <span style="flex-shrink:0; font-family:'JetBrains Mono',monospace; font-size:.78rem; padding:.65rem 1.25rem; border:1px solid var(--line-p); border-radius:999px; opacity:.75;">MySQL</span>
+          <span style="flex-shrink:0; font-family:'JetBrains Mono',monospace; font-size:.78rem; padding:.65rem 1.25rem; border:1px solid var(--line-p); border-radius:999px; opacity:.75;">Snowflake</span>
+          <span style="flex-shrink:0; font-family:'JetBrains Mono',monospace; font-size:.78rem; padding:.65rem 1.25rem; border:1px solid var(--line-p); border-radius:999px; opacity:.75;">BigQuery</span>
+          <span style="flex-shrink:0; font-family:'JetBrains Mono',monospace; font-size:.78rem; padding:.65rem 1.25rem; border:1px solid var(--line-p); border-radius:999px; opacity:.75;">Redshift</span>
+          <span style="flex-shrink:0; font-family:'JetBrains Mono',monospace; font-size:.78rem; padding:.65rem 1.25rem; border:1px solid var(--line-p); border-radius:999px; opacity:.75;">MongoDB</span>
+          <span style="flex-shrink:0; font-family:'JetBrains Mono',monospace; font-size:.78rem; padding:.65rem 1.25rem; border:1px solid var(--line-p); border-radius:999px; opacity:.75;">Excel</span>
+          <span style="flex-shrink:0; font-family:'JetBrains Mono',monospace; font-size:.78rem; padding:.65rem 1.25rem; border:1px solid var(--line-p); border-radius:999px; opacity:.75;">Google Sheets</span>
+          <span style="flex-shrink:0; font-family:'JetBrains Mono',monospace; font-size:.78rem; padding:.65rem 1.25rem; border:1px solid var(--line-p); border-radius:999px; opacity:.75;">REST API</span>
+          <span style="flex-shrink:0; font-family:'JetBrains Mono',monospace; font-size:.78rem; padding:.65rem 1.25rem; border:1px solid var(--line-p); border-radius:999px; opacity:.75;">Amazon S3</span>
+          <span style="flex-shrink:0; font-family:'JetBrains Mono',monospace; font-size:.78rem; padding:.65rem 1.25rem; border:1px solid var(--line-p); border-radius:999px; opacity:.75;">PostgreSQL</span>
+          <span style="flex-shrink:0; font-family:'JetBrains Mono',monospace; font-size:.78rem; padding:.65rem 1.25rem; border:1px solid var(--line-p); border-radius:999px; opacity:.75;">MySQL</span>
+          <span style="flex-shrink:0; font-family:'JetBrains Mono',monospace; font-size:.78rem; padding:.65rem 1.25rem; border:1px solid var(--line-p); border-radius:999px; opacity:.75;">Snowflake</span>
+          <span style="flex-shrink:0; font-family:'JetBrains Mono',monospace; font-size:.78rem; padding:.65rem 1.25rem; border:1px solid var(--line-p); border-radius:999px; opacity:.75;">BigQuery</span>
+          <span style="flex-shrink:0; font-family:'JetBrains Mono',monospace; font-size:.78rem; padding:.65rem 1.25rem; border:1px solid var(--line-p); border-radius:999px; opacity:.75;">Redshift</span>
+          <span style="flex-shrink:0; font-family:'JetBrains Mono',monospace; font-size:.78rem; padding:.65rem 1.25rem; border:1px solid var(--line-p); border-radius:999px; opacity:.75;">MongoDB</span>
+          <span style="flex-shrink:0; font-family:'JetBrains Mono',monospace; font-size:.78rem; padding:.65rem 1.25rem; border:1px solid var(--line-p); border-radius:999px; opacity:.75;">Excel</span>
+          <span style="flex-shrink:0; font-family:'JetBrains Mono',monospace; font-size:.78rem; padding:.65rem 1.25rem; border:1px solid var(--line-p); border-radius:999px; opacity:.75;">Google Sheets</span>
+          <span style="flex-shrink:0; font-family:'JetBrains Mono',monospace; font-size:.78rem; padding:.65rem 1.25rem; border:1px solid var(--line-p); border-radius:999px; opacity:.75;">REST API</span>
+          <span style="flex-shrink:0; font-family:'JetBrains Mono',monospace; font-size:.78rem; padding:.65rem 1.25rem; border:1px solid var(--line-p); border-radius:999px; opacity:.75;">Amazon S3</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= TARIFS ========================= -->
+  <section id="tarifs" style="background:var(--purple-dark); color:#f5f4f7; padding:0 clamp(1.25rem, 1rem + 2vw, 3.5rem) clamp(4rem, 3rem + 4vw, 6.5rem);">
+    <div style="max-width:1320px; margin:0 auto;">
+      <div style="max-width:560px; margin:0 auto clamp(2rem, 1.6rem + 2vw, 3rem); text-align:center;">
+        <h2 data-reveal="true" style="margin:0 0 .6rem; font-size:clamp(1.7rem, 1.3rem + 2vw, 2.4rem); font-weight:800; letter-spacing:-.025em; transition:opacity .6s var(--ease), transform .6s var(--ease);">Un plan pour chaque étape</h2>
+        <p data-reveal="true" style="margin:0; font-size:.92rem; transition:opacity .6s var(--ease) .05s, transform .6s var(--ease) .05s;">Chaque offre démarre par une démonstration sur vos propres sources.</p>
+      </div>
+
+      <div data-grid="cards3" style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.25rem; align-items:stretch;">
+        <!-- Starter -->
+        <div data-tilt="true" data-reveal="true" style="position:relative; border-radius:22px; padding:clamp(1.75rem, 1.4rem + 1vw, 2.25rem); display:flex; flex-direction:column; transition:transform .4s var(--ease); background:rgba(245,244,247,.05); border:1px solid var(--line-p);">
+          <p style="display:none;">Le plus choisi</p>
+          <p style="margin:0; font-family:'JetBrains Mono',monospace; font-size:.72rem; opacity:.6;">Starter</p>
+          <p style="margin:.35rem 0 .75rem; font-size:.84rem; line-height:1.5; opacity:.75; min-height:3rem;">Pour sortir vos premières équipes des tickets data, sans risque.</p>
+          <p style="margin:0 0 1.25rem; font-size:clamp(1.7rem, 1.4rem + 1vw, 2.1rem); font-weight:800; position:relative;">490 €<span style="font-size:.85rem; font-weight:400; opacity:.6;">/mois</span></p>
+          <ul style="list-style:none; margin:0 0 1.5rem; padding:0; display:flex; flex-direction:column; gap:.6rem; flex:1;">
+            <li style="font-size:.84rem; padding-left:1.4rem; position:relative; opacity:.85; line-height:1.45;"><span style="position:absolute; left:0; top:.45rem; width:8px; height:8px; border-radius:50%; background:var(--green);"></span>5 utilisateurs, opérationnels dès le jour 1</li>
+            <li style="font-size:.84rem; padding-left:1.4rem; position:relative; opacity:.85; line-height:1.45;"><span style="position:absolute; left:0; top:.45rem; width:8px; height:8px; border-radius:50%; background:var(--green);"></span>3 workspaces, connecteurs SQL &amp; CSV</li>
+            <li style="font-size:.84rem; padding-left:1.4rem; position:relative; opacity:.85; line-height:1.45;"><span style="position:absolute; left:0; top:.45rem; width:8px; height:8px; border-radius:50%; background:var(--green);"></span>Historique 90 jours, support email</li>
+          </ul>
+          <a href="#demo-booking" data-magnetic="true" style="display:inline-flex; align-items:center; justify-content:center; gap:.5rem; padding:.9rem 1.6rem; border-radius:999px; font-weight:700; font-size:.88rem; border:1px solid var(--line-p); color:#f5f4f7;">Réserver une démo</a>
+        </div>
+        <!-- Pro (mis en avant) -->
+        <div data-tilt="true" data-reveal="true" style="position:relative; border-radius:22px; padding:clamp(1.75rem, 1.4rem + 1vw, 2.25rem); display:flex; flex-direction:column; transition:transform .4s var(--ease); background:linear-gradient(165deg, rgba(184,166,255,.2), rgba(245,244,247,.05)); border:1px solid var(--lavender); box-shadow:0 24px 60px rgba(20,8,70,.4);">
+          <p style="position:absolute; top:-.7rem; left:clamp(1.75rem, 1.4rem + 1vw, 2.25rem); background:var(--lavender); color:var(--purple-dark); font-family:'JetBrains Mono',monospace; font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; padding:.3rem .7rem; border-radius:999px; font-weight:700; margin:0;">Le plus choisi</p>
+          <p style="margin:0; font-family:'JetBrains Mono',monospace; font-size:.72rem; opacity:.6;">Pro</p>
+          <p style="margin:.35rem 0 .75rem; font-size:.84rem; line-height:1.5; opacity:.75; min-height:3rem;">Pour scaler l'auto-service sans perdre le contrôle des accès.</p>
+          <p style="margin:0 0 1.25rem; font-size:clamp(1.7rem, 1.4rem + 1vw, 2.1rem); font-weight:800; position:relative;">1 290 €<span style="font-size:.85rem; font-weight:400; opacity:.6;">/mois</span></p>
+          <ul style="list-style:none; margin:0 0 1.5rem; padding:0; display:flex; flex-direction:column; gap:.6rem; flex:1;">
+            <li style="font-size:.84rem; padding-left:1.4rem; position:relative; opacity:.85; line-height:1.45;"><span style="position:absolute; left:0; top:.45rem; width:8px; height:8px; border-radius:50%; background:var(--green);"></span>25 utilisateurs, workspaces illimités</li>
+            <li style="font-size:.84rem; padding-left:1.4rem; position:relative; opacity:.85; line-height:1.45;"><span style="position:absolute; left:0; top:.45rem; width:8px; height:8px; border-radius:50%; background:var(--green);"></span>Tous les connecteurs natifs &amp; cloud</li>
+            <li style="font-size:.84rem; padding-left:1.4rem; position:relative; opacity:.85; line-height:1.45;"><span style="position:absolute; left:0; top:.45rem; width:8px; height:8px; border-radius:50%; background:var(--green);"></span>Matrice de rôles avancée &amp; logs d'audit</li>
+            <li style="font-size:.84rem; padding-left:1.4rem; position:relative; opacity:.85; line-height:1.45;"><span style="position:absolute; left:0; top:.45rem; width:8px; height:8px; border-radius:50%; background:var(--green);"></span>Support prioritaire 24/7</li>
+          </ul>
+          <a href="#demo-booking" data-magnetic="true" style="display:inline-flex; align-items:center; justify-content:center; gap:.5rem; padding:.9rem 1.6rem; border-radius:999px; font-weight:700; font-size:.88rem; background:#f5f4f7; color:var(--purple);">Réserver une démo</a>
+        </div>
+        <!-- Enterprise -->
+        <div data-tilt="true" data-reveal="true" style="position:relative; border-radius:22px; padding:clamp(1.75rem, 1.4rem + 1vw, 2.25rem); display:flex; flex-direction:column; transition:transform .4s var(--ease); background:rgba(245,244,247,.05); border:1px solid var(--line-p);">
+          <p style="display:none;">Le plus choisi</p>
+          <p style="margin:0; font-family:'JetBrains Mono',monospace; font-size:.72rem; opacity:.6;">Enterprise</p>
+          <p style="margin:.35rem 0 .75rem; font-size:.84rem; line-height:1.5; opacity:.75; min-height:3rem;">Pour les exigences de sécurité les plus strictes et le sur-mesure.</p>
+          <p style="margin:0 0 1.25rem; font-size:clamp(1.7rem, 1.4rem + 1vw, 2.1rem); font-weight:800; position:relative;">Sur-mesure<span style="font-size:.85rem; font-weight:400; opacity:.6;"></span></p>
+          <ul style="list-style:none; margin:0 0 1.5rem; padding:0; display:flex; flex-direction:column; gap:.6rem; flex:1;">
+            <li style="font-size:.84rem; padding-left:1.4rem; position:relative; opacity:.85; line-height:1.45;"><span style="position:absolute; left:0; top:.45rem; width:8px; height:8px; border-radius:50%; background:var(--green);"></span>Utilisateurs illimités, on-premise ou cloud privé</li>
+            <li style="font-size:.84rem; padding-left:1.4rem; position:relative; opacity:.85; line-height:1.45;"><span style="position:absolute; left:0; top:.45rem; width:8px; height:8px; border-radius:50%; background:var(--green);"></span>SLA 99.9 %, SSO / SAML</li>
+            <li style="font-size:.84rem; padding-left:1.4rem; position:relative; opacity:.85; line-height:1.45;"><span style="position:absolute; left:0; top:.45rem; width:8px; height:8px; border-radius:50%; background:var(--green);"></span>Accompagnement et formation dédiés</li>
+          </ul>
+          <a href="#demo-booking" data-magnetic="true" style="display:inline-flex; align-items:center; justify-content:center; gap:.5rem; padding:.9rem 1.6rem; border-radius:999px; font-weight:700; font-size:.88rem; border:1px solid var(--line-p); color:#f5f4f7;">Réserver une démo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= FAQ ========================= -->
+  <section id="faq" style="padding:clamp(3.5rem, 2.5rem + 4vw, 6rem) clamp(1.25rem, 1rem + 2vw, 3.5rem);">
+    <div style="max-width:900px; margin:0 auto;">
+      <div style="text-align:center; margin-bottom:clamp(2rem, 1.6rem + 1.5vw, 3rem);">
+        <h2 data-reveal="true" style="margin:0 0 .6rem; font-size:clamp(1.7rem, 1.3rem + 2vw, 2.4rem); font-weight:800; letter-spacing:-.025em; transition:opacity .6s var(--ease), transform .6s var(--ease);">Questions fréquentes</h2>
+        <p data-reveal="true" style="margin:0; font-size:.92rem; color:rgba(28,15,77,.62); transition:opacity .6s var(--ease) .05s, transform .6s var(--ease) .05s;">Sécurité, stockage, déploiement : tout ce que demandent vos équipes IT.</p>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:.75rem;">
+        <div data-faq="true" style="background:var(--white); border-radius:18px; box-shadow:0 10px 30px rgba(28,15,77,.06); overflow:hidden;">
+          <button data-faq-btn="true" style="width:100%; display:flex; align-items:center; justify-content:space-between; gap:1rem; text-align:left; padding:1.25rem 1.5rem; font-size:.98rem; font-weight:700; font-family:inherit; color:inherit; background:none; border:none; cursor:pointer;">
+            Où sont stockées nos données d'entreprise ?
+            <svg data-faq-chev="true" style="flex-shrink:0; transition:transform 0.3s var(--ease); opacity:.5;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+          </button>
+          <div data-faq-body="true" style="display:grid; grid-template-rows:0fr; transition:grid-template-rows .35s var(--ease); overflow:hidden;">
+            <p data-faq-text="true" style="overflow:hidden; margin:0; padding:0 1.5rem 0; font-size:.88rem; line-height:1.65; color:rgba(28,15,77,.68); min-height:0;">KyroData s'interface directement avec vos bases sans dupliquer vos données sensibles. Les requêtes sont exécutées dans votre environnement de déploiement configuré.</p>
+          </div>
+        </div>
+        <div data-faq="true" style="background:var(--white); border-radius:18px; box-shadow:0 10px 30px rgba(28,15,77,.06); overflow:hidden;">
+          <button data-faq-btn="true" style="width:100%; display:flex; align-items:center; justify-content:space-between; gap:1rem; text-align:left; padding:1.25rem 1.5rem; font-size:.98rem; font-weight:700; font-family:inherit; color:inherit; background:none; border:none; cursor:pointer;">
+            Comment fonctionne la gestion des permissions ?
+            <svg data-faq-chev="true" style="flex-shrink:0; transition:transform 0.3s var(--ease); opacity:.5;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+          </button>
+          <div data-faq-body="true" style="display:grid; grid-template-rows:0fr; transition:grid-template-rows .35s var(--ease); overflow:hidden;">
+            <p data-faq-text="true" style="overflow:hidden; margin:0; padding:0 1.5rem 0; font-size:.88rem; line-height:1.65; color:rgba(28,15,77,.68); min-height:0;">Chaque utilisateur est rattaché à un rôle avec des permissions granulaires par workspace, par source et par action (lecture, export, administration), configurables depuis la console RBAC.</p>
+          </div>
+        </div>
+        <div data-faq="true" style="background:var(--white); border-radius:18px; box-shadow:0 10px 30px rgba(28,15,77,.06); overflow:hidden;">
+          <button data-faq-btn="true" style="width:100%; display:flex; align-items:center; justify-content:space-between; gap:1rem; text-align:left; padding:1.25rem 1.5rem; font-size:.98rem; font-weight:700; font-family:inherit; color:inherit; background:none; border:none; cursor:pointer;">
+            Peut-on connecter des fichiers locaux en toute sécurité ?
+            <svg data-faq-chev="true" style="flex-shrink:0; transition:transform 0.3s var(--ease); opacity:.5;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+          </button>
+          <div data-faq-body="true" style="display:grid; grid-template-rows:0fr; transition:grid-template-rows .35s var(--ease); overflow:hidden;">
+            <p data-faq-text="true" style="overflow:hidden; margin:0; padding:0 1.5rem 0; font-size:.88rem; line-height:1.65; color:rgba(28,15,77,.68); min-height:0;">Oui. Les fichiers structurés (CSV, Excel) sont importés dans un workspace isolé, chiffrés au repos et soumis aux mêmes règles RBAC que vos autres connecteurs.</p>
+          </div>
+        </div>
+        <div data-faq="true" style="background:var(--white); border-radius:18px; box-shadow:0 10px 30px rgba(28,15,77,.06); overflow:hidden;">
+          <button data-faq-btn="true" style="width:100%; display:flex; align-items:center; justify-content:space-between; gap:1rem; text-align:left; padding:1.25rem 1.5rem; font-size:.98rem; font-weight:700; font-family:inherit; color:inherit; background:none; border:none; cursor:pointer;">
+            Combien de temps prend le déploiement ?
+            <svg data-faq-chev="true" style="flex-shrink:0; transition:transform 0.3s var(--ease); opacity:.5;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+          </button>
+          <div data-faq-body="true" style="display:grid; grid-template-rows:0fr; transition:grid-template-rows .35s var(--ease); overflow:hidden;">
+            <p data-faq-text="true" style="overflow:hidden; margin:0; padding:0 1.5rem 0; font-size:.88rem; line-height:1.65; color:rgba(28,15,77,.68); min-height:0;">La plupart des équipes Starter et Pro sont opérationnelles en moins d'une semaine. Les déploiements Enterprise on-premise sont accompagnés de bout en bout par notre équipe technique.</p>
+          </div>
+        </div>
+        <div data-faq="true" style="background:var(--white); border-radius:18px; box-shadow:0 10px 30px rgba(28,15,77,.06); overflow:hidden;">
+          <button data-faq-btn="true" style="width:100%; display:flex; align-items:center; justify-content:space-between; gap:1rem; text-align:left; padding:1.25rem 1.5rem; font-size:.98rem; font-weight:700; font-family:inherit; color:inherit; background:none; border:none; cursor:pointer;">
+            Un accompagnement est-il prévu lors de l'intégration ?
+            <svg data-faq-chev="true" style="flex-shrink:0; transition:transform 0.3s var(--ease); opacity:.5;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+          </button>
+          <div data-faq-body="true" style="display:grid; grid-template-rows:0fr; transition:grid-template-rows .35s var(--ease); overflow:hidden;">
+            <p data-faq-text="true" style="overflow:hidden; margin:0; padding:0 1.5rem 0; font-size:.88rem; line-height:1.65; color:rgba(28,15,77,.68); min-height:0;">Chaque déploiement Pro et Enterprise inclut un accompagnement dédié : connexion des sources, configuration des rôles et formation de vos équipes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RÉSERVATION DÉMO ===================== -->
+  <section id="demo-booking" style="padding:0 clamp(1.25rem, 1rem + 2vw, 3.5rem) clamp(3rem, 2.5rem + 3vw, 5rem);">
+    <div data-reveal="true" data-grid="split" style="max-width:1320px; margin:0 auto; background:linear-gradient(135deg, var(--purple), var(--purple-dim) 55%, var(--purple-dark)); background-size:200% 200%; animation:gradientPan 18s ease-in-out infinite; border-radius:32px; padding:clamp(2rem, 1.6rem + 2vw, 3.5rem); display:grid; grid-template-columns:1.1fr .9fr; grid-auto-flow:row; gap:clamp(2rem, 1.5rem + 2vw, 4rem); align-items:center; color:var(--white); transition:opacity .6s var(--ease), transform .6s var(--ease);">
+      <div>
+        <p style="font-family:'JetBrains Mono',monospace; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; margin:0 0 .75rem; opacity:.75;">Prochaine étape</p>
+        <h2 style="margin:0 0 1rem; font-size:clamp(1.8rem, 1.4rem + 2.2vw, 2.6rem); font-weight:800; letter-spacing:-.03em; line-height:1.1;">Arrêtez de deviner.<br>Commencez à demander.</h2>
+        <p style="margin:0 0 1.5rem; font-size:.95rem; line-height:1.65; opacity:.85; max-width:44ch;">30 minutes avec un expert KyroData : on regarde vos sources, vos contraintes de sécurité, et on vous montre exactement ce que ça donne chez vous.</p>
+        <div style="display:flex; gap:1.5rem; flex-wrap:wrap; font-size:.8rem; opacity:.8;">
+          <span>✓ Réponse sous 24 h</span>
+          <span>✓ Aucune donnée requise</span>
+          <span>✓ Sans engagement</span>
+        </div>
+      </div>
+
+      <form data-demo-form="true" style="display:flex; flex-direction:column; gap:.9rem; background:rgba(20,10,56,0.35); border:1px solid var(--line-p); border-radius:22px; padding:clamp(1.5rem, 1.2rem + 1vw, 2rem);">
+        <label style="display:flex; flex-direction:column; gap:.4rem; font-size:.76rem; opacity:.8;">
+          Nom complet
+          <input type="text" name="name" placeholder="Jean Dupont" required style="background:rgba(245,244,247,0.1); border:1px solid var(--line-p); color:var(--white); padding:.85rem 1rem; border-radius:12px; font-family:'Inter',sans-serif; font-size:.9rem;">
+        </label>
+        <label style="display:flex; flex-direction:column; gap:.4rem; font-size:.76rem; opacity:.8;">
+          Email professionnel
+          <input type="email" name="email" placeholder="j.dupont@entreprise.com" required style="background:rgba(245,244,247,0.1); border:1px solid var(--line-p); color:var(--white); padding:.85rem 1rem; border-radius:12px; font-family:'Inter',sans-serif; font-size:.9rem;">
+        </label>
+        <button data-form-btn="true" type="submit" style="width:100%; display:inline-flex; align-items:center; justify-content:center; gap:.5rem; padding:1rem 1.6rem; border-radius:999px; font-weight:700; font-size:.92rem; border:none; cursor:pointer; font-family:inherit; background:#ffffff; color:var(--purple); transition:background .3s var(--ease);">Réserver ma démonstration</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========================= FOOTER ========================= -->
+  <footer style="padding:0 clamp(1.25rem, 1rem + 2vw, 3.5rem) 2.5rem;">
+    <div style="max-width:1320px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; font-size:.8rem; color:rgba(28,15,77,.6); padding-top:1.75rem; border-top:1px solid var(--line-w);">
+      <a href="#top" style="display:flex; align-items:center; gap:.6rem; font-weight:800; color:var(--ink);">
+        <svg viewBox="0 0 100 100" width="22" height="22"><defs><linearGradient id="kgC" x1="10" y1="5" x2="90" y2="95" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a68bff"></stop><stop offset="0.55" stop-color="#5b2eff"></stop><stop offset="1" stop-color="#2b1466"></stop></linearGradient></defs><rect x="10" y="6" width="20" height="88" rx="10" fill="url(#kgC)"></rect><path d="M38 46 L74 8 Q77 5 82 5 L94 5 Q98 5 95.5 8.5 L60 47 Q57 50 60 53 L96.5 91.5 Q99 95 95 95 L82 95 Q78 95 75 92 L38 54 Z" fill="url(#kgC)"></path></svg>
+        KyroData
+      </a>
+      <span>© 2026 KyroData. Tous droits réservés · RGPD · ISO 27001</span>
+    </div>
+  </footer>
+
+  <!-- ===================== CTA FLOTTANT ===================== -->
+  <a href="#demo-booking" data-float-cta="true" data-magnetic="true" style="position:fixed; bottom:1.5rem; right:1.5rem; z-index:70; display:inline-flex; align-items:center; gap:1rem; background:linear-gradient(135deg, var(--purple), var(--purple-dim)); color:#ffffff; padding:.9rem 1rem .9rem 1.35rem; border-radius:999px; box-shadow:0 18px 40px rgba(91,46,255,.35); opacity:0; transform:translateY(20px); pointer-events:none; transition:opacity .4s var(--ease), transform .4s var(--ease);">
+    <span>
+      <span style="display:block; font-weight:800; font-size:.92rem;">Testez sur vos données.</span>
+      <span style="display:block; font-size:.74rem; opacity:.8;">30 min avec un expert, sans engagement.</span>
+    </span>
+    <span style="display:inline-flex; width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,.18); align-items:center; justify-content:center; font-size:1rem;">→</span>
+  </a>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
